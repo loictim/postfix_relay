@@ -9,7 +9,7 @@ RUN apk -U add --no-cache postfix && \
     chown  root /var/spool/postfix/pid && \
     postalias /etc/postfix/aliases
     
-COPY run.sh && chmod +x /root/run.sh
+COPY run.sh /root/run.sh && chmod +x /root/run.sh
 EXPOSE 25
 
 CMD ["/root/run.sh"]
