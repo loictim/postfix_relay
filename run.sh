@@ -17,12 +17,12 @@ export BANNER=${BANNER:-"$HOSTNAME ESMTP."}
 if [ -z "$MYNETWORKS"  ] ; then
 	postconf -e "mynetworks=127.0.0.1/32"
 else
-  postconf -e myhostname="$MYNETWORKS"
+  postconf -e mynetworks="$MYNETWORKS"
 fi
 if [ -z "$MYNETWORKS"  ] ; then
 	postconf -e "mynetworks=127.0.0.1/32"
 else
-  postconf -e "myhostname=$MYNETWORKS"
+  postconf -e "mynetworks=$MYNETWORKS"
 fi
 
 postconf -e inet_protocols=$PROTOCOL
