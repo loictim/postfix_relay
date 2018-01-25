@@ -28,4 +28,4 @@ postconf -e smtp_use_tls=no
 
 postconf -e "smtpd_banner=$BANNER"
 
-exec /usr/sbin/postfix  start
+/usr/lib/postfix/master -d
