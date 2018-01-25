@@ -11,7 +11,6 @@ RUN apk -U add --no-cache postfix && \
     
 ADD run.sh /root/run.sh
 RUN chmod +x /root/run.sh
-EXPOSE 25
 
 CMD ["/root/run.sh"]
-
+EXPOSE 25
